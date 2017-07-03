@@ -11,7 +11,7 @@
 </head>
   <body>
 
-    <nav class="navbar navbar-transparent navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
@@ -41,10 +41,15 @@
           <li><a href="#">Proyectos <span class="sr-only">(current)</span></a></li>
           <li><a href="#">Nosotros</a></li>
           <li><a href="#">Contacto</a></li>
+          <% if current_user %>
+            <li class="menu-link"><%= link_to "Cambiar contraseña", edit_user_registration_path %></li>
+            <li class="menu-link"><%= link_to "Cerrar Sesión", destroy_user_session_path, method: :delete %></li>
+          <% end %>
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
+  <%= render partial: "shared/flash_messages", flash: flash %>
 
   <%= yield %>
 
