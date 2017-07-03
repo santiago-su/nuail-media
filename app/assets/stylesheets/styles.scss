@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
 #video-background {
 /*  making the video fullscreen  */
   position: fixed;
@@ -8,4 +10,24 @@
   width: auto;
   height: auto;
   z-index: -100;
+}
+
+.nuail-logo-1 {
+  padding: 0.5em 0 0 0.5em;
+}
+
+.home-landing-text {
+  h1 {
+    position: absolute;
+    top: 35%;
+    left: 2%;
+    width: 50%;
+    font-size: 2em;
+    letter-spacing: 3px;
+    color: #080808;
+    text-align: center;
+    background-color: #fff;
+    opacity: 0.3;
+    border-radius: 0.2em;
+  }
 }
