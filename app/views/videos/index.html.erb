@@ -1,0 +1,36 @@
+<div class="mdl-grid">
+  <div class="mdl-cell mdl-cell--12-col">
+    <div class="mdl-cell mdl-cell--12-col">
+      <%= link_to "Nuevo Video", new_video_path, class: 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent' %>
+    </div>
+    <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp full-width">
+      <thead>
+        <tr>
+          <th class="mdl-data-table__cell--non-numeric full-width">Nombre</th>
+          <th></th>
+          <th></th>
+          <th>Editar</th>
+          <th>Eliminar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @videos.each do |video| %>
+          <tr>
+            <td class="mdl-data-table__cell--non-numeric"><%= video.name %></td>
+            <td></td>
+            <td></td>
+            <td>
+              <%= link_to "Editar", edit_video_path(video), class: 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent' %>
+            </td>
+            <td>
+              <%= link_to "Eliminar", video_path(video), method: :delete,
+                  class: 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent',
+                  data: { confirm: 'Estas seguro?'} %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+  </div>
+</div>
