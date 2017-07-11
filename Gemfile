@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 
+ruby "2.2.0"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.1'
 # Use postgresql as the database for Active Record
@@ -20,6 +21,8 @@ gem 'devise'
 gem "letter_opener", :group => :development
 gem 'carrierwave', :github => "carrierwaveuploader/carrierwave"
 gem 'cloudinary'
+gem 'rails_12factor', group: :production
+gem 'puma'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
