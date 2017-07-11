@@ -9,4 +9,8 @@ Rails.application.routes.draw do
 
   resources :videos
 
+  resources :photos do
+    resources :photo_images
+  end
+
 end

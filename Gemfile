@@ -13,9 +13,13 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
+gem 'dotenv-rails', groups: [:development, :test]
+gem 'foreman'
 
 gem 'devise'
 gem "letter_opener", :group => :development
+gem 'carrierwave', :github => "carrierwaveuploader/carrierwave"
+gem 'cloudinary'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
