@@ -1,0 +1,40 @@
+<div class="mdl-grid">
+  <div class="mdl-cell mdl-cell--12-col">
+    <div class="mdl-cell mdl-cell--12-col">
+      <%= link_to "Nuevo Proyecto de Diseño", new_design_path, class: 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent' %>
+    </div>
+    <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp full-width">
+      <thead>
+        <tr>
+          <th class="mdl-data-table__cell--non-numeric full-width">Nombre</th>
+          <th></th>
+          <th></th>
+          <th>Añadir Fotos</th>
+          <th>Editar</th>
+          <th>Eliminar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @designs.each do |design| %>
+          <tr>
+            <td class="mdl-data-table__cell--non-numeric"><%= design.name %></td>
+            <td></td>
+            <td></td>
+            <td>
+              <%= link_to "Añadir Fotos", design_path(design), class: 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent' %>
+            </td>
+            <td>
+              <%= link_to "Editar", edit_design_path(design), class: 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent' %>
+            </td>
+            <td>
+              <%= link_to "Eliminar", design_path(design), method: :delete,
+                  class: 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent',
+                  data: { confirm: 'Estas seguro?'} %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+  </div>
+</div>

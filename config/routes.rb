@@ -13,4 +13,8 @@ Rails.application.routes.draw do
     resources :photo_images
   end
 
+  resources :designs do
+    resources :design_images
+  end
+
 end

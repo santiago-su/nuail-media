@@ -1,0 +1,22 @@
+<div class="mdl-grid">
+
+  <div class="mdl-layout-spacer"></div>
+  <div class="mdl-cell mdl-cell--4-col">
+    <h3>Nombre</h3>
+    <%= @design.name %>
+    <h3>Descripción</h3>
+    <%= @design.description %>
+    <h3>Participantes</h3>
+    <%= @design.participants %>
+    <h3>Fotos</h3>
+    <% @design.design_images.each do |image| %>
+      <div><%= cl_image_tag(image.file_url, :crop => :fill, :width => 180, :height => 180) %></div>
+    <% end %>
+
+  </div>
+  <div class="mdl-layout-spacer"></div>
+
+  <div class="mdl-layout-spacer"></div>
+  <%= render "./design_images/form", { design_image: DesignImage.new, design: @design } %>
+  <div class="mdl-layout-spacer"></div>
+</div>
