@@ -1,0 +1,40 @@
+<div class="mdl-grid">
+  <div class="mdl-cell mdl-cell--12-col">
+    <div class="mdl-cell mdl-cell--12-col">
+      <%= link_to "Nuevo Proyecto de Editorial", new_editorial_path, class: 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent' %>
+    </div>
+    <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp full-width">
+      <thead>
+        <tr>
+          <th class="mdl-data-table__cell--non-numeric full-width">Nombre</th>
+          <th></th>
+          <th></th>
+          <th>Añadir Fotos</th>
+          <th>Editar</th>
+          <th>Eliminar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @editorials.each do |editorial| %>
+          <tr>
+            <td class="mdl-data-table__cell--non-numeric"><%= editorial.name %></td>
+            <td></td>
+            <td></td>
+            <td>
+              <%= link_to "Añadir Fotos", editorial_path(editorial), class: 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent' %>
+            </td>
+            <td>
+              <%= link_to "Editar", edit_editorial_path(editorial), class: 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent' %>
+            </td>
+            <td>
+              <%= link_to "Eliminar", editorial_path(editorial), method: :delete,
+                  class: 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent',
+                  data: { confirm: 'Estas seguro?'} %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+  </div>
+</div>

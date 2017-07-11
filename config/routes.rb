@@ -17,4 +17,8 @@ Rails.application.routes.draw do
     resources :design_images
   end
 
+  resources :editorials do
+    resources :editorial_images
+  end
+
 end

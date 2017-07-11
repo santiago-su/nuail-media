@@ -1,0 +1,49 @@
+<div class="mdl-grid">
+  <div class="mdl-layout-spacer"></div>
+  <div class="mdl-cell mdl-cell--4-col">
+    <%= form_for editorial, html: {id: 'editorial_form'} do |f| %>
+
+    <% if @editorial.errors.any? %>
+      <div id="error_explanation" class='bg-danger'>
+        <h2>Hay <%= pluralize(@editorial.errors.count, "error") %> en la forma:</h2>
+        <ul>
+        <% @editorial.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="mdl-cell mdl-cell--12-col">
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <%= f.text_field :name, class: "mdl-textfield__input", type: 'text' %>
+        <%= f.label :name, "Nombre", class: 'mdl-textfield__label' %>
+      </div>
+    </div>
+
+    <div class="mdl-cell mdl-cell--12-col">
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <%= f.text_area :description, class: "mdl-textfield__input", type: 'text' %>
+        <%= f.label :description, "Descripción", class: 'mdl-textfield__label' %>
+      </div>
+    </div>
+
+    <div class="mdl-cell mdl-cell--12-col">
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <%= f.text_field :participants, class: "mdl-textfield__input", type: 'text' %>
+        <%= f.label :participants, "Participantes", class: 'mdl-textfield__label' %>
+      </div>
+    </div>
+
+
+    <div class="mdl-cell mdl-cell--12-col">
+      <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+        Guardar
+      </button>
+    </div>
+
+    <% end %>
+
+  </div>
+  <div class="mdl-layout-spacer"></div>
+</div>
