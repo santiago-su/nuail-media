@@ -17,7 +17,7 @@
 $( document ).ready(function() {
 
   // Ugly hack to load iframe after mdl js layout is loaded
-  document.body.addEventListener('mdl-componentupgraded', (event) => {
+  document.body.addEventListener('mdl-componentupgraded', function(event) {
      if (event.target.className.split(' ').indexOf('mdl-js-layout') < 0) {
        return
      }
