@@ -15,6 +15,17 @@
 //= require_tree .
 
 $( document ).ready(function() {
+
+  // Ugly hack to load iframe after mdl js layout is loaded
+  document.body.addEventListener('mdl-componentupgraded', (event) => {
+     if (event.target.className.split(' ').indexOf('mdl-js-layout') < 0) {
+       return
+     }
+
+     $('.video-cont').append('<iframe class="video-iframe" src="https://youtube.com/embed/2Z_tMfffAVE"></iframe>')
+
+  })
+
   if ($('#landing-video')) {
     $('#landing-video').prop('autoplay', true)
     $('#landing-video').prop('mute', true)
