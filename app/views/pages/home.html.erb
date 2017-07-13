@@ -1,8 +1,53 @@
-<div class='home-page'>
-  <section class="home-landing-text">
-    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h1>
-  </section>
-  <video autoplay loop id="video-background" muted plays-inline>
-    <source src="https://player.vimeo.com/external/158148793.hd.mp4?s=8e8741dbee251d5c35a759718d4b0976fbf38b6f&profile_id=119&oauth2_token_id=57447761" type="video/mp4">
-  </video>
+<div class="nuail-be-together-section mdl-typography--text-center">
+   <div class="logo-font nuail-slogan">Nuail Media</div>
+   <div class="logo-font nuail-sub-slogan">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</div>
+ </div>
+
+<div class="homepage-hero-module">
+  <div class="video-container">
+    <div class="filter"></div>
+    <%= video_tag 'Workaholic.mp4', class: 'fillWidth', id: 'landing-video' %>Your browser does not support the video tag. I suggest you upgrade your browser.
+    <div class="poster hidden">
+      <%= image_tag 'Workaholic.jpg' %>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="nuail-screen-section mdl-typography--text-center">
+  <div class="mdl-typography--display-1-color-contrast">Nuestros clientes</div>
+  <div class="nuail-screens">
+    <div class="nuail-tv nuail-screen">
+      <a class="nuail-image-link" href="">
+        <%= image_tag "bimbo.png", class: 'nuail-screen-image' %>
+      </a>
+    </div>
+    <div class="nuail-tv nuail-screen">
+      <a class="nuail-image-link" href="">
+        <%= image_tag "banamex.png", class: 'nuail-screen-image' %>
+      </a>
+    </div>
+    <div class="nuail-tv nuail-screen">
+      <a class="nuail-image-link" href="">
+        <%= image_tag "el-universal.png", class: 'nuail-screen-image' %>
+      </a>
+    </div>
+    <div class="nuail-tv nuail-screen">
+      <a class="nuail-image-link" href="">
+        <%= image_tag "televisa.png", class: 'nuail-screen-image' %>
+      </a>
+    </div>
+  </div>
+</div>
+
+
+<div class="nuail-screen-section mdl-typography--text-center">
+  <div class="mdl-typography--display-1-color-contrast">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+  <button class="home-call-to-action mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    Los Servicios que ofrecemos
+  </button>
+  <button class="home-call-to-action mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    Nuestros Últimos Proyectos
+  </button>
 </div>

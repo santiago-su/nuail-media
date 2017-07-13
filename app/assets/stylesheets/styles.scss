@@ -1,39 +1,384 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
-body { padding-top: 70px; }
+body {
+  margin: 0;
+}
+
+/* Disable ugly boxes around images in IE10 */
+a img{
+  border: 0px;
+}
+
+::-moz-selection {
+  background-color: #C9283E;
+  color: #fff;
+}
+
+::selection {
+  background-color: #C9283E;
+  color: #fff;
+}
+
+.nuail-header .mdl-menu__container {
+  z-index: 50;
+  margin: 0 !important;
+}
+
+
+.mdl-textfield--expandable {
+  width: auto;
+}
+
+.nuail-fab {
+  position: absolute;
+  right: 20%;
+  bottom: -26px;
+  z-index: 3;
+  background: #64ffda !important;
+  color: black !important;
+}
+
+.nuail-mobile-title {
+  display: none !important;
+}
+
+
+.nuail-logo-image {
+  height: 42px;
+  width: 140px;
+}
+
+
+.nuail-header {
+  overflow: visible;
+  background-color: white;
+}
+
+.nuail-header .material-icons {
+  color: #540032 !important;
+}
+
+.nuail-header .mdl-layout__drawer-button {
+  background: transparent;
+  color: #540032;
+}
+
+.nuail-header .mdl-navigation__link {
+  color: #820333;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.nuail-navigation-container {
+  /* Simple hack to make the overflow happen to the left instead... */
+  direction: rtl;
+  order: 1;
+  width: 500px;
+  transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+  width 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nuail-navigation {
+  /* ... and now make sure the content is actually LTR */
+  direction: ltr;
+  justify-content: flex-end;
+  width: 800px;
+}
+
+.nuail-search-box.is-focused + .nuail-navigation-container {
+  opacity: 0;
+  width: 100px;
+}
+
+
+.nuail-navigation .mdl-navigation__link {
+  display: inline-block;
+  height: 60px;
+  line-height: 68px;
+  background-color: transparent !important;
+  border-bottom: 4px solid transparent;
+}
+
+.nuail-navigation .mdl-navigation__link:hover {
+  border-bottom: 4px solid #C9283E;
+}
+
+.nuail-more-button {
+  order: 3;
+}
+
+
+.nuail-drawer {
+  border-right: none;
+}
+
+.nuail-drawer-separator {
+  height: 1px;
+  background-color: #dcdcdc;
+  margin: 8px 0;
+}
+
+.nuail-drawer .mdl-navigation__link.mdl-navigation__link {
+  font-size: 14px;
+  color: #C9283E;
+}
+
+.nuail-drawer span.mdl-navigation__link.mdl-navigation__link {
+  color: #C9283E;
+}
+
+.nuail-drawer .mdl-layout-title {
+  position: relative;
+  background: #C9283E;
+  height: 160px;
+}
+
+.nuail-drawer .nuail-logo-image {
+  position: absolute;
+  bottom: 16px;
+}
+
+.nuail-be-together-section {
+  position: absolute;
+  color: white;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+}
+
+.logo-font {
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  line-height: 1;
+  color: #540032;
+  font-weight: 500;
+}
+
+.nuail-slogan {
+  font-size: 60px;
+  padding-top: 160px;
+}
+
+.nuail-sub-slogan {
+  font-size: 21px;
+  padding-top: 24px;
+}
+
+.nuail-screen-section {
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
+
+.nuail-screens {
+  text-align: right;
+  width: 100%;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+.nuail-screen {
+  text-align: center;
+}
+
+.nuail-screen .nuail-link {
+  margin-top: 16px;
+  display: block;
+  z-index: 2;
+}
+
+.nuail-image-link {
+  text-decoration: none;
+}
+
+.nuail-tv {
+  display: inline-block;
+  width: 300px;
+  margin-right: 80px;
+}
+
+.nuail-tv .nuail-screen-image {
+  width: 100%;
+  z-index: 1;
+}
+
+
+
+.nuail-link {
+  text-decoration: none;
+  color: #540032 !important;
+}
+
+.nuail-link:hover {
+  color: #C9283E !important;
+}
+
+.nuail-link .material-icons {
+  position: relative;
+  top: -1px;
+  vertical-align: middle;
+}
+
+.nuail-alt-link {
+  text-decoration: none;
+  color: #64ffda !important;
+  font-size: 16px;
+}
+
+.nuail-alt-link:hover {
+  color: #C9283E !important;
+}
+
+.nuail-alt-link .material-icons {
+  position: relative;
+  top: 6px;
+}
+
+.nuail-footer {
+  background-color: #540032;
+  position: relative;
+}
+
+.nuail-footer a:hover {
+  color: #C9283E;
+}
+
+.nuail-footer .mdl-mega-footer--top-section::after {
+  border-bottom: none;
+}
+
+.nuail-footer .mdl-mega-footer--middle-section::after {
+  border-bottom: none;
+}
+
+.nuail-footer .mdl-mega-footer--bottom-section {
+  position: relative;
+}
+
+.nuail-footer .mdl-mega-footer--bottom-section a {
+  margin-right: 2em;
+}
+
+.nuail-footer .mdl-mega-footer--right-section a .material-icons {
+  position: relative;
+  top: 6px;
+}
+
+
+.nuail-link-menu:hover {
+  cursor: pointer;
+}
+
+
+/**** Mobile layout ****/
+@media (max-width: 900px) {
+  .nuail-navigation-container {
+    display: none;
+  }
+
+  .nuail-title {
+    display: none !important;
+  }
+
+  .nuail-mobile-title {
+    display: block !important;
+    position: absolute;
+    left: calc(50% - 70px);
+    top: 12px;
+    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* WebViews in iOS 9 break the "~" operator, and WebViews in OS X 10.10 break
+  consecutive "+" operators in some cases. Therefore, we need to use both
+  here to cover all the bases. */
+  .nuail.nuail-search-box.is-focused ~ .nuail-mobile-title,
+  .nuail-search-box.is-focused + .nuail-navigation-container + .nuail-mobile-title {
+    opacity: 0;
+  }
+
+  .nuail-more-button {
+    display: none;
+  }
+
+  .nuail-be-together-section {
+    height: 350px;
+  }
+
+  .nuail-slogan {
+    font-size: 26px;
+    margin: 0 16px;
+    padding-top: 24px;
+  }
+
+  .nuail-sub-slogan {
+    font-size: 16px;
+    margin: 0 16px;
+    padding-top: 8px;
+  }
+
+  .nuail-fab {
+    display: none;
+  }
+
+  .nuail-footer .mdl-mega-footer--bottom-section {
+    display: none;
+  }
+}
 
 .full-width {
   width: 100%;
 }
 
-#video-background {
-/*  making the video fullscreen  */
-  position: fixed;
-  right: 0;
-  top: 0;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: 700px;
-  z-index: -100;
+.homepage-hero-module {
+  border-right: none;
+  border-left: none;
+  position: relative;
+}
+.no-video .video-container video,
+.touch .video-container video {
+  display: none;
+}
+.no-video .video-container .poster,
+.touch .video-container .poster {
+  display: block !important;
+}
+.video-container {
+  position: relative;
+  bottom: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: #000;
+}
+.video-container .poster img {
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+}
+.video-container .filter {
+  z-index: 100;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+  width: 100%;
+}
+.video-container video {
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+}
+.video-container video.fillWidth {
+  width: 100%;
 }
 
-.nuail-logo-1 {
-  padding: 0.5em 0 0 0.5em;
+
+.home-call-to-action {
+  margin: 70px;
+  height: 80px;
+  width: 200px;
 }
 
-.home-landing-text {
-  h1 {
-    position: absolute;
-    top: 35%;
-    left: 2%;
-    width: 50%;
-    font-size: 2em;
-    letter-spacing: 3px;
-    color: #080808;
-    text-align: center;
-    background-color: #fff;
-    opacity: 0.3;
-    border-radius: 0.2em;
-  }
+
+.video-service-page {
+  height: 900px;
 }

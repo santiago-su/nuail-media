@@ -4,8 +4,9 @@ Rails.application.routes.draw do
   root to: "pages#home"
   get 'video-service',      to: 'pages#video'
   get 'photo-service',      to: 'pages#photo'
-  get 'design-service',      to: 'pages#design'
-  get 'editorial-service',      to: 'pages#editorial'
+  get 'design-service',     to: 'pages#design'
+  get 'editorial-service',  to: 'pages#editorial'
+  get 'projects',           to: 'pages#projects' 
 
   resources :videos
 
