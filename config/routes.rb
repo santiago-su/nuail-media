@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'photo-service',      to: 'pages#photo'
   get 'design-service',     to: 'pages#design'
   get 'editorial-service',  to: 'pages#editorial'
-  get 'projects',           to: 'pages#projects' 
+  get 'projects',           to: 'pages#projects'
 
   resources :videos
 
@@ -14,12 +14,18 @@ Rails.application.routes.draw do
     resources :photo_images
   end
 
+  get 'photos/:id/photo-detail',  to: 'photos#detail', as: 'photo-detail'
+
   resources :designs do
     resources :design_images
   end
 
+  get 'designs/:id/design-detail',  to: 'designs#detail', as: 'design-detail'
+
   resources :editorials do
     resources :editorial_images
   end
+
+  get 'editorials/:id/editorial-detail',  to: 'editorials#detail', as: 'editorial-detail'
 
 end

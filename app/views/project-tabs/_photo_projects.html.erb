@@ -4,13 +4,14 @@
       <% photos.each do |project| %>
         <div class="mdl-cell mdl-cell--4-col list-image">
           <li>
-            <div id="<%= project.id %>" class="list-project-container">
-              <%= cl_image_tag(project.photo_images.last.file_url,:crop => :fill, :height => 180, class: 'list-image') %>
-              <div class="project-info">
-                <h4><%= project.name %></h4>
-                <p><%= project.description %></p>
+            <%= link_to photo_detail_path(project) do %>
+              <div id="<%= project.id %>" class="list-project-container">
+                <%= cl_image_tag(project.photo_images.last.file_url,:crop => :fill, :height => 180, class: 'list-image') %>
+                <div class="project-info">
+                  <h4><%= project.name %></h4>
+                </div>
               </div>
-            </div>
+            <% end %>
           </li>
         </div>
       <% end %>

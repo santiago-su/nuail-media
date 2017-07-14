@@ -1,0 +1,38 @@
+<div class="mdl-grid mdl-grid-proyect-detail">
+  <div class="mdl-cell mdl-cell--12-col mdl-cell-proyect-detail">
+    <div class="project-image-detail">
+      <div><%= cl_image_tag(@photo.photo_images.last.file_url, :crop => :fill) %></div>
+    </div>
+  </div>
+</div>
+<div class="mdl-grid">
+  <div class="mdl-layout-spacer"></div>
+  <div class="mdl-cell mdl-cell--4-col">
+    <h1><%= @photo.name %></h1>
+  </div>
+  <div class="mdl-layout-spacer"></div>
+  <div class="mdl-cell mdl-cell--2-col">
+    <h3>Colaboradores</h3>
+    <span class="mdl-chip">
+      <span class="mdl-chip__text"><%= @photo.participants %></span>
+    </span>
+  </div>
+</div>
+
+<div class="mdl-grid">
+  <div class="mdl-cell mdl-cell--10-col">
+    <p><%= @photo.description %></p>
+  </div>
+</div>
+
+<div class="all-project-images-list">
+  <div class="project-list">
+    <div class="mdl-grid project-list-grid mdl-grid--no-spacing">
+      <% @photo.photo_images.each do |image| %>
+        <div class="mdl-cell mdl-cell--4-col list-image">
+          <div><%= cl_image_tag(image.file_url, :crop => :fill, :width => 180, :height => 180) %></div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -516,3 +516,28 @@ a img{
     opacity: 1;
   }
 }
+
+.mdl-grid-proyect-detail {
+  padding: 0;
+}
+
+.mdl-cell-proyect-detail {
+  width: 100%;
+  margin: 0;
+}
+
+.project-image-detail {
+  width: 100%;
+  height: 400px;
+  max-height: 400px;
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.project-image-detail img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}

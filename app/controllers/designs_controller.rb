@@ -1,5 +1,5 @@
 class DesignsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: :detail
 
   def index
     @designs = Design.all
@@ -20,6 +20,10 @@ class DesignsController < ApplicationController
   end
 
   def show
+    @design = Design.find(params[:id])
+  end
+
+  def detail
     @design = Design.find(params[:id])
   end
 

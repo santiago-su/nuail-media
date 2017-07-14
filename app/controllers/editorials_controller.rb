@@ -1,5 +1,5 @@
 class EditorialsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: :detail
 
   def index
     @editorials = Editorial.all
@@ -20,6 +20,10 @@ class EditorialsController < ApplicationController
   end
 
   def show
+    @editorial = Editorial.find(params[:id])
+  end
+
+  def detail
     @editorial = Editorial.find(params[:id])
   end
 

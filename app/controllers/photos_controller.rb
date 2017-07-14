@@ -1,5 +1,5 @@
 class PhotosController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: :detail
 
   def index
     @photos = Photo.all
@@ -20,6 +20,10 @@ class PhotosController < ApplicationController
   end
 
   def show
+    @photo = Photo.find(params[:id])
+  end
+
+  def detail
     @photo = Photo.find(params[:id])
   end
 

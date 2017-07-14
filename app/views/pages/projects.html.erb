@@ -3,18 +3,21 @@
     <div class="featured-project">
       <% @featured.each do |project| %>
         <% if project.class.name == "Design" %>
-          <%= cl_image_tag(project.design_images.last.file_url) %>
+          <%= link_to design_detail_path(project) do %>
+            <%= cl_image_tag(project.design_images.last.file_url) %>
+          <% end %>
         <% elsif project.class.name == "Editorial" %>
-          <%= cl_image_tag(project.editorial_images.last.file_url) %>
+          <%= link_to editorial_detail_path(project) do %>
+            <%= cl_image_tag(project.editorial_images.last.file_url) %>
+          <% end %>
         <% elsif project.class.name == "Photo" %>
-          <%= cl_image_tag(project.photo_images.last.file_url) %>
+          <%= link_to photo_detail_path(project) do %>
+            <%= cl_image_tag(project.photo_images.last.file_url) %>
+          <% end %>
         <% end %>
         <div class="project-info-container">
           <div class="project-name">
             <h4><%= project.name %></h4>
-          </div>
-          <div class="project-description">
-            <p><%= project.description %></p>
           </div>
         </div>
       <% end %>
