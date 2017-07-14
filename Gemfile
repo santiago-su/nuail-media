@@ -23,6 +23,7 @@ gem 'carrierwave', :github => "carrierwaveuploader/carrierwave"
 gem 'cloudinary'
 gem 'rails_12factor', group: :production
 gem 'puma'
+gem 'mail_form'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

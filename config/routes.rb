@@ -38,4 +38,7 @@ Rails.application.routes.draw do
 
   get 'editorials/:id/editorial-detail',  to: 'editorials#detail', as: 'editorial-detail'
 
+  get 'contacts',     to: 'contacts#new'
+  resources "contacts", only: [:new, :create]
+
 end
