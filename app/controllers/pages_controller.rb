@@ -15,6 +15,9 @@ class PagesController < ApplicationController
   def editorial
   end
 
+  def about
+  end
+
   def projects
     @videos = Video.all
     @designs = Design.all
