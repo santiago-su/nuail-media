@@ -27,18 +27,27 @@
           <!-- Navigation -->
           <div class="nuail-navigation-container">
             <nav class="nuail-navigation mdl-navigation">
-              <button class="mdl-navigation__link mdl-button mdl-js-button" id="servicios-navbar">
-                Servicios
-              </button>
-              <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect" for="servicios-navbar">
-                <%= link_to "Videos", video_service_path, class: "mdl-menu__item" %>
-                <%= link_to "Fotografía", photo_service_path, class: "mdl-menu__item" %>
-                <%= link_to "Diseño", design_service_path, class: "mdl-menu__item" %>
-                <%= link_to "Editorial", editorial_service_path, class: "mdl-menu__item" %>
-              </ul>
-              <%= link_to "Proyectos", projects_path, class: "mdl-navigation__link mdl-typography--text-uppercase" %>
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="#">Nosotros</a>
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="#">Contacto</a>
+              <% if current_user %>
+                <%= link_to "Videos", videos_path, class: "mdl-navigation__link" %>
+                <%= link_to "Editorials", editorials_path, class: "mdl-navigation__link" %>
+                <%= link_to "Photos", photos_path, class: "mdl-navigation__link" %>
+                <%= link_to "Designs", designs_path, class: "mdl-navigation__link" %>
+                <%= link_to "Change Password", edit_user_registration_path, class: "mdl-navigation__link" %>
+                <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "mdl-navigation__link" %>
+              <% else %>
+                <button class="mdl-navigation__link mdl-button mdl-js-button" id="servicios-navbar">
+                  Servicios
+                </button>
+                <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect" for="servicios-navbar">
+                  <%= link_to "Videos", video_service_path, class: "mdl-menu__item" %>
+                  <%= link_to "Fotografía", photo_service_path, class: "mdl-menu__item" %>
+                  <%= link_to "Diseño", design_service_path, class: "mdl-menu__item" %>
+                  <%= link_to "Editorial", editorial_service_path, class: "mdl-menu__item" %>
+                </ul>
+                <%= link_to "Proyectos", projects_path, class: "mdl-navigation__link mdl-typography--text-uppercase" %>
+                <a class="mdl-navigation__link mdl-typography--text-uppercase" href="#">Nosotros</a>
+                <a class="mdl-navigation__link mdl-typography--text-uppercase" href="#">Contacto</a>
+              <% end %>
             </nav>
           </div>
           <span class="nuail-mobile-title mdl-layout-title">
@@ -91,9 +100,8 @@
           </div>
 
           <div class="mdl-mega-footer--bottom-section">
-            <a class="nuail-link nuail-admin-link mdl-typography--font-light" href="">Admin</a>
+            <%= link_to "Admin", user_session_path, class: 'nuail-link nuail-admin-link mdl-typography--font-light' %>
           </div>
-
         </footer>
       </div>
     </div>
