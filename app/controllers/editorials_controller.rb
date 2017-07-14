@@ -45,7 +45,7 @@ class EditorialsController < ApplicationController
   private
 
   def editorial_params
-    params.require(:editorial).permit(:name, :description, :participants)
+    params.require(:editorial).permit(:name, :description, :participants, :featured)
   end
 
 end

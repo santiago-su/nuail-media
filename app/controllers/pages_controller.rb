@@ -19,7 +19,8 @@ class PagesController < ApplicationController
     @videos = Video.all
     @designs = Design.all
     @photos = Photo.all
-    @editorial = Editorial.all
+    @editorials = Editorial.all
+    @featured = [Design.featured ,Photo.featured, Editorial.featured].sample
   end
 
 end

@@ -1,56 +1,52 @@
-<div class="mdl-layout__container">
-  <div class="mdl-layout__content">
-    <div class="featured-project mdl-typography--text-center">
+<div class="mdl-grid mdl-grid-proyects">
+  <div class="mdl-cell mdl-cell--12-col mdl-cell-proyects">
+    <div class="featured-project">
+      <% @featured.each do |project| %>
+        <% if project.class.name == "Design" %>
+          <%= cl_image_tag(project.design_images.last.file_url) %>
+        <% elsif project.class.name == "Editorial" %>
+          <%= cl_image_tag(project.editorial_images.last.file_url) %>
+        <% elsif project.class.name == "Photo" %>
+          <%= cl_image_tag(project.photo_images.last.file_url) %>
+        <% end %>
+        <div class="project-info-container">
+          <div class="project-name">
+            <h4><%= project.name %></h4>
+          </div>
+          <div class="project-description">
+            <p><%= project.description %></p>
+          </div>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--12-col">
+
+<div class="mdl-grid mdl-grid-proyects">
+  <div class="mdl-cell mdl-cell--12-col mdl-cell-proyects">
     <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
       <div class="mdl-tabs__tab-bar">
-          <a href="#all-panel" class="mdl-tabs__tab is-active">All</a>
-          <a href="#video-panel" class="mdl-tabs__tab">Video</a>
-          <a href="#photo-panel" class="mdl-tabs__tab">Photo</a>
-          <a href="#design-panel" class="mdl-tabs__tab">Design</a>
-          <a href="#editorial-panel" class="mdl-tabs__tab">Editorial</a>
+        <a href="#all-panel" class="mdl-tabs__tab is-active">All</a>
+        <a href="#video-panel" class="mdl-tabs__tab">Video</a>
+        <a href="#photo-panel" class="mdl-tabs__tab">Photo</a>
+        <a href="#design-panel" class="mdl-tabs__tab">Design</a>
+        <a href="#editorial-panel" class="mdl-tabs__tab">Editorial</a>
       </div>
 
       <div class="mdl-tabs__panel is-active" id="all-panel">
-        <ul>
-          <li>Eddard</li>
-          <li>Catelyn</li>
-          <li>Robb</li>
-          <li>Sansa</li>
-          <li>Brandon</li>
-          <li>Arya</li>
-          <li>Rickon</li>
-        </ul>
+        <%= render partial: 'project-tabs/all_projects', locals: { designs: @designs, photos: @photos, editorials: @editorials } %>
       </div>
       <div class="mdl-tabs__panel" id="video-panel">
-        <ul>
-          <li>Tywin</li>
-          <li>Cersei</li>
-          <li>Jamie</li>
-          <li>Tyrion</li>
-        </ul>
+        <%= render partial: 'project-tabs/video_projects' %>
       </div>
       <div class="mdl-tabs__panel" id="photo-panel">
-        <ul>
-          <li>Viserys</li>
-          <li>Daenerys</li>
-        </ul>
+        <%= render partial: 'project-tabs/photo_projects', locals: { photos: @photos } %>
       </div>
       <div class="mdl-tabs__panel" id="design-panel">
-        <ul>
-          <li>Viserys</li>
-          <li>Daenerys</li>
-        </ul>
+        <%= render partial: 'project-tabs/design_projects', locals: { designs: @designs } %>
       </div>
       <div class="mdl-tabs__panel" id="editorial-panel">
-        <ul>
-          <li>Viserys</li>
-          <li>Daenerys</li>
-        </ul>
+        <%= render partial: 'project-tabs/editorial_projects', locals: { editorials: @editorials } %>
       </div>
     </div>
   </div>

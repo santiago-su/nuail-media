@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170711225301) do
+ActiveRecord::Schema.define(version: 20170713210213) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,9 +22,12 @@ ActiveRecord::Schema.define(version: 20170711225301) do
   end
 
   create_table "designs", force: :cascade do |t|
-    t.string "name"
-    t.string "participants"
-    t.text   "description"
+    t.string   "name"
+    t.string   "participants"
+    t.text     "description"
+    t.boolean  "featured",     default: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "editorial_images", force: :cascade do |t|
@@ -33,9 +36,12 @@ ActiveRecord::Schema.define(version: 20170711225301) do
   end
 
   create_table "editorials", force: :cascade do |t|
-    t.string "name"
-    t.string "participants"
-    t.text   "description"
+    t.string   "name"
+    t.string   "participants"
+    t.text     "description"
+    t.boolean  "featured",     default: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "photo_images", force: :cascade do |t|
@@ -44,9 +50,12 @@ ActiveRecord::Schema.define(version: 20170711225301) do
   end
 
   create_table "photos", force: :cascade do |t|
-    t.string "name"
-    t.string "participants"
-    t.text   "description"
+    t.string   "name"
+    t.string   "participants"
+    t.text     "description"
+    t.boolean  "featured",     default: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: :cascade do |t|
@@ -68,10 +77,13 @@ ActiveRecord::Schema.define(version: 20170711225301) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
   create_table "videos", force: :cascade do |t|
-    t.string "name"
-    t.string "embed_url"
-    t.string "participants"
-    t.text   "description"
+    t.string   "name"
+    t.string   "embed_url"
+    t.string   "participants"
+    t.text     "description"
+    t.boolean  "featured",     default: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
