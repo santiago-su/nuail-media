@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Francois+One');
 
 body {
   margin: 0;
+  font-family: 'Francois One', sans-serif;
 }
 
 /* Disable ugly boxes around images in IE10 */
@@ -34,7 +35,7 @@ a img{
   right: 20%;
   bottom: -26px;
   z-index: 3;
-  background: #64ffda !important;
+  background: #526e90 !important;
   color: black !important;
 }
 
@@ -44,10 +45,12 @@ a img{
 
 
 .nuail-logo-image {
-  height: 42px;
   width: 140px;
 }
 
+.nuail-logo-image-main {
+  width: 14%;
+}
 
 .nuail-header {
   overflow: visible;
@@ -55,16 +58,16 @@ a img{
 }
 
 .nuail-header .material-icons {
-  color: #540032 !important;
+  color: #526e90 !important;
 }
 
 .nuail-header .mdl-layout__drawer-button {
   background: transparent;
-  color: #540032;
+  color: #526e90;
 }
 
 .nuail-header .mdl-navigation__link {
-  color: #820333;
+  color: #15181d;
   font-weight: 700;
   font-size: 14px;
 }
@@ -83,6 +86,10 @@ a img{
   direction: ltr;
   justify-content: flex-end;
   width: 800px;
+
+  button {
+    font-family: 'Francois One', sans-serif;
+  }
 }
 
 .nuail-search-box.is-focused + .nuail-navigation-container {
@@ -100,7 +107,7 @@ a img{
 }
 
 .nuail-navigation .mdl-navigation__link:hover {
-  border-bottom: 4px solid #C9283E;
+  border-bottom: 4px solid #526e90;
 }
 
 .nuail-more-button {
@@ -119,17 +126,17 @@ a img{
 }
 
 .nuail-drawer .mdl-navigation__link.mdl-navigation__link {
-  font-size: 14px;
-  color: #C9283E;
+  font-size: 24px;
+  color: #15181d;
 }
 
 .nuail-drawer span.mdl-navigation__link.mdl-navigation__link {
-  color: #C9283E;
+  color: #526e90;
 }
 
 .nuail-drawer .mdl-layout-title {
   position: relative;
-  background: #C9283E;
+  background: #15181d;
   height: 160px;
 }
 
@@ -142,25 +149,32 @@ a img{
   position: absolute;
   color: white;
   left: 50%;
-  top: 50%;
+  top: 40%;
   transform: translate(-50%, -50%);
   z-index: 999;
 }
 
 .logo-font {
-  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  font-family: 'Francois One', sans-serif;
   line-height: 1;
-  color: #540032;
+  color: #15181d;
   font-weight: 500;
 }
 
 .nuail-slogan {
   font-size: 60px;
+  color: white;
   padding-top: 160px;
+
+  img {
+    width: 100%;
+  }
 }
 
 .nuail-sub-slogan {
   font-size: 21px;
+  color: white;
+  line-height: 125%;
   padding-top: 24px;
 }
 
@@ -235,7 +249,7 @@ a img{
 }
 
 .nuail-footer {
-  background-color: #540032;
+  background-color: #15181d;
   position: relative;
 }
 
@@ -381,6 +395,31 @@ a img{
 
 .video-service-page {
   height: 900px;
+
+  p.line-item-video {
+    font-size: 20px;
+    margin-left: -34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  p.line-item-video span {
+    background: #fff;
+    margin: 34px 46px 40px 15px;
+  }
+  p.line-item-video:before,
+  p.line-item-video:after {
+    background: black;
+    height: 2px;
+    flex: 1;
+    content: '';
+  }
+  p.line-item-video.left:after {
+    background: none;
+  }
+  p.line-item-video.right:before {
+    background: none;
+  }
 }
 
 .video-cont {
@@ -457,7 +496,11 @@ a img{
 }
 
 .mdl-tabs__tab-bar {
-  background-color: #C9283E;
+  background-color: #15181d;
+}
+
+.mdl-tabs.is-upgraded .mdl-tabs__tab.is-active {
+  color: #526e90;
 }
 
 .mdl-tabs__tab {
@@ -544,4 +587,47 @@ a img{
 
 .contact-form {
   padding-left: 100px;
+}
+
+.division-line-video {
+  left: 48%;
+  top: -80%;
+  width: 3px;
+  height: 290%;
+  margin: 0;
+  position: absolute;
+  overflow: hidden;
+}
+
+.division-line-video-inner {
+  position: absolute;
+  width:100%;
+  height: 50%;
+  background: black;
+  top: 30%;
+}
+
+.service-icon-image {
+  width: 13%;
+  float: left;
+  margin-right: 3%;
+}
+
+.service-icon-image-nu {
+  width: 10%;
+  float: left;
+  margin-right: 3%;
+}
+
+.service-title {
+  margin-bottom: 10%;
+
+  h1 {
+    font-family: 'Francois One', sans-serif;
+    font-size: 70px;
+  }
+}
+
+.mdl-button--accent.mdl-button--accent.mdl-button--raised, .mdl-button--accent.mdl-button--accent.mdl-button--fab {
+  background-color: #526e90;
 }

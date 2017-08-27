@@ -1,6 +1,11 @@
 <div class="nuail-be-together-section mdl-typography--text-center">
-   <div class="logo-font nuail-slogan">Nuail Media</div>
-   <div class="logo-font nuail-sub-slogan">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</div>
+   <div class="logo-font nuail-slogan"><%= image_tag 'nuail-2.png', class: 'home-page-main-logo' %></div>
+   <div class="logo-font nuail-sub-slogan">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dignissim arcu massa, sed finibus purus cursus nec. Quisque condimentum tempus sapien eget condimentum. Phasellus vel erat scelerisque, varius tortor sit amet, tincidunt mauris. Aliquam ullamcorper id mi vitae commodo.</div>
+   <%= link_to editorial_service_path do %>
+     <button class="home-call-to-action mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+       Ver más
+     </button>
+   <% end %>
  </div>
 
 <div class="homepage-hero-module">
@@ -44,10 +49,14 @@
 
 <div class="nuail-screen-section mdl-typography--text-center">
   <div class="mdl-typography--display-1-color-contrast">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-  <button class="home-call-to-action mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-    Los Servicios que ofrecemos
-  </button>
-  <button class="home-call-to-action mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-    Nuestros Últimos Proyectos
-  </button>
+  <%= link_to editorial_service_path do %>
+    <button class="home-call-to-action mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+      Los Servicios que ofrecemos
+    </button>
+  <% end %>
+  <%= link_to projects_path do %>
+    <button class="home-call-to-action mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+      Nuestros Últimos Proyectos
+    </button>
+  <% end %>
 </div>

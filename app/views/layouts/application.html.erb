@@ -19,7 +19,7 @@
         <div class="mdl-layout__header-row">
           <%= link_to root_path do %>
             <span class="nuail-title mdl-layout-title">
-              <%= image_tag 'nuail-2.png', class: 'nuail-logo-image' %>
+              <%= image_tag 'nuail-3.png', class: 'nuail-logo-image-main' %>
             </span>
           <% end %>
           <!-- Add spacer, to align navigation to the right in desktop -->
@@ -28,25 +28,25 @@
           <div class="nuail-navigation-container">
             <nav class="nuail-navigation mdl-navigation">
               <% if current_user %>
-                <%= link_to "Videos", videos_path, class: "mdl-navigation__link" %>
-                <%= link_to "Editorials", editorials_path, class: "mdl-navigation__link" %>
-                <%= link_to "Photos", photos_path, class: "mdl-navigation__link" %>
-                <%= link_to "Designs", designs_path, class: "mdl-navigation__link" %>
-                <%= link_to "Change Password", edit_user_registration_path, class: "mdl-navigation__link" %>
-                <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "mdl-navigation__link" %>
+                <%= link_to "VIDEOS", videos_path, class: "mdl-navigation__link" %>
+                <%= link_to "NU-BUNDLE", editorials_path, class: "mdl-navigation__link" %>
+                <%= link_to "PHOTOS", photos_path, class: "mdl-navigation__link" %>
+                <%= link_to "DESIGNS", designs_path, class: "mdl-navigation__link" %>
+                <%= link_to "CHANGE PASSWORD", edit_user_registration_path, class: "mdl-navigation__link" %>
+                <%= link_to "LOGOUT", destroy_user_session_path, method: :delete, class: "mdl-navigation__link" %>
               <% else %>
                 <button class="mdl-navigation__link mdl-button mdl-js-button" id="servicios-navbar">
                   Servicios
                 </button>
                 <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect" for="servicios-navbar">
-                  <%= link_to "Videos", video_service_path, class: "mdl-menu__item" %>
-                  <%= link_to "Fotografía", photo_service_path, class: "mdl-menu__item" %>
-                  <%= link_to "Diseño", design_service_path, class: "mdl-menu__item" %>
-                  <%= link_to "Editorial", editorial_service_path, class: "mdl-menu__item" %>
+                  <%= link_to "VIDEOS", video_service_path, class: "mdl-menu__item" %>
+                  <%= link_to "FOTOGRAFÍA", photo_service_path, class: "mdl-menu__item" %>
+                  <%= link_to "DISEÑO", design_service_path, class: "mdl-menu__item" %>
+                  <%= link_to "NU-BUNDLE", editorial_service_path, class: "mdl-menu__item" %>
                 </ul>
-                <%= link_to "Proyectos", projects_path, class: "mdl-navigation__link mdl-typography--text-uppercase" %>
-                <%= link_to "Nosotros", nosotros_path, class: "mdl-navigation__link mdl-typography--text-uppercase" %>
-                <%= link_to "Contacto", new_contact_path, class: "mdl-navigation__link mdl-typography--text-uppercase" %>
+                <%= link_to "PROYECTOS", projects_path, class: "mdl-navigation__link mdl-typography--text-uppercase" %>
+                <%= link_to "NOSOTROS", nosotros_path, class: "mdl-navigation__link mdl-typography--text-uppercase" %>
+                <%= link_to "CONTACTO", new_contact_path, class: "mdl-navigation__link mdl-typography--text-uppercase" %>
               <% end %>
             </nav>
           </div>
@@ -59,16 +59,16 @@
 
       <div class="nuail-drawer mdl-layout__drawer">
         <span class="mdl-layout-title">
-          <%= image_tag 'nuail-2.png', class: 'nuail-logo-image' %>
+          <%= image_tag 'nuail-3.png', class: 'nuail-logo-image' %>
         </span>
         <nav class="mdl-navigation">
-          <%= link_to "Videos", video_service_path, class: "mdl-navigation__link" %>
-          <%= link_to "Fotografía", photo_service_path, class: "mdl-navigation__link" %>
-          <%= link_to "Diseño", design_service_path, class: "mdl-navigation__link" %>
-          <%= link_to "Editorial", editorial_service_path, class: "mdl-navigation__link" %>
-          <%= link_to "Proyectos", projects_path, class: "mdl-navigation__link" %>
-          <a class="mdl-navigation__link" href="#">Nosotros</a>
-          <a class="mdl-navigation__link" href="#">Contacto</a>
+          <%= link_to "VIDEOS", video_service_path, class: "mdl-navigation__link" %>
+          <%= link_to "FOTOGRAFÍA", photo_service_path, class: "mdl-navigation__link" %>
+          <%= link_to "DISEÑO", design_service_path, class: "mdl-navigation__link" %>
+          <%= link_to "NU-BUNDLE", editorial_service_path, class: "mdl-navigation__link" %>
+          <%= link_to "PROYECTOS", projects_path, class: "mdl-navigation__link" %>
+          <a class="mdl-navigation__link" href="#">NOSOTROS</a>
+          <a class="mdl-navigation__link" href="#">CONTACTO</a>
         </nav>
       </div>
       <%= render partial: "shared/flash_messages", flash: flash %>
@@ -80,11 +80,11 @@
         <footer class="nuail-footer mdl-mega-footer">
           <div class="mdl-mega-footer--top-section">
             <div class="mdl-mega-footer--left-section">
-              <%= image_tag 'facebook-color.png', width: 55, height: 55 %>
+              <%= image_tag 'facebook.png', width: 55, height: 55 %>
               &nbsp;
-              <%= image_tag 'twitter-logo.png', width: 45, height: 45 %>
+              <%= image_tag 'twitter.png', width: 45, height: 45 %>
               &nbsp;
-              <%= image_tag 'instagram-logo.png', width: 45, height: 45 %>
+              <%= image_tag 'instagram.png', width: 45, height: 45 %>
             </div>
             <div class="mdl-mega-footer--right-section">
               <a class="mdl-typography--font-light" href="#top">
