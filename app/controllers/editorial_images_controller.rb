@@ -14,8 +14,9 @@ class EditorialImagesController < ApplicationController
   end
 
   def destroy
-    remove_image_at_index(params[:id].to_i)
-    flash[:error] = "Failed deleting image" unless @editorial.save
+    Cloudinary::Uploader.destroy(params[:id])
+    editorial_image = EditorialImage.find(params[:editorial_id])
+    editorial_image.destroy
     redirect_to :back
   end
 

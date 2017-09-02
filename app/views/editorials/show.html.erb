@@ -11,6 +11,11 @@
     <h3>Fotos</h3>
     <% @editorial.editorial_images.each do |image| %>
       <div><%= cl_image_tag(image.file_url, :crop => :fill, :width => 180, :height => 180) %></div>
+      <div>
+        <%= link_to "Eliminar", editorial_editorial_image_path(image, @editorial), method: :delete,
+            class: 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent',
+            data: { confirm: 'Estas seguro?'} %>
+      </div>
     <% end %>
 
   </div>

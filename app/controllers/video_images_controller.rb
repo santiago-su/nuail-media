@@ -14,8 +14,9 @@ class VideoImagesController < ApplicationController
   end
 
   def destroy
-    remove_image_at_index(params[:id].to_i)
-    flash[:error] = "Failed deleting image" unless @video.save
+    Cloudinary::Uploader.destroy(params[:id])
+    video_image = VideoImage.find(params[:video_id])
+    video_image.destroy
     redirect_to :back
   end
 

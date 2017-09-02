@@ -14,8 +14,9 @@ class DesignImagesController < ApplicationController
   end
 
   def destroy
-    remove_image_at_index(params[:id].to_i)
-    flash[:error] = "Failed deleting image" unless @design.save
+    Cloudinary::Uploader.destroy(params[:id])
+    design_image = DesignImage.find(params[:design_id])
+    design_image.destroy
     redirect_to :back
   end
 

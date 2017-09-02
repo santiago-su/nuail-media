@@ -11,6 +11,11 @@
     <h3>Fotos</h3>
     <% @video.video_images.each do |image| %>
       <div><%= cl_image_tag(image.file_url, :crop => :fill, :width => 180, :height => 180) %></div>
+      <div>
+        <%= link_to "Eliminar", video_video_image_path(image, @video), method: :delete,
+            class: 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent',
+            data: { confirm: 'Estas seguro?'} %>
+      </div>
     <% end %>
 
   </div>
