@@ -1,0 +1,22 @@
+<div class="mdl-grid">
+
+  <div class="mdl-layout-spacer"></div>
+  <div class="mdl-cell mdl-cell--4-col">
+    <h3>Nombre</h3>
+    <%= @video.name %>
+    <h3>Descripción</h3>
+    <%= @video.description %>
+    <h3>Participantes</h3>
+    <%= @video.participants %>
+    <h3>Fotos</h3>
+    <% @video.video_images.each do |image| %>
+      <div><%= cl_image_tag(image.file_url, :crop => :fill, :width => 180, :height => 180) %></div>
+    <% end %>
+
+  </div>
+  <div class="mdl-layout-spacer"></div>
+
+  <div class="mdl-layout-spacer"></div>
+  <%= render "./video_images/form", { video_image: VideoImage.new, video: @video } %>
+  <div class="mdl-layout-spacer"></div>
+</div>

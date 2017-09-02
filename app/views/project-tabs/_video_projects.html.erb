@@ -1,1 +1,20 @@
-<h1>Under construction</h1>
+<div class="all-project-images-list">
+  <ul class="project-list">
+    <div class="mdl-grid project-list-grid mdl-grid--no-spacing">
+      <% videos.each do |project| %>
+        <div class="mdl-cell mdl-cell--4-col list-image">
+          <li>
+            <%= link_to video_detail_path(project) do %>
+              <div id="<%= project.id %>" class="list-project-container">
+                <%= cl_image_tag(project.video_images.last.file_url,:crop => :fill, :height => 180, class: 'list-image') %>
+                <div class="project-info">
+                  <h4><%= project.name %></h4>
+                </div>
+              </div>
+            <% end %>
+          </li>
+        </div>
+      <% end %>
+    </div>
+  </ul>
+</div>

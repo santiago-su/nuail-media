@@ -1,5 +1,5 @@
 class VideosController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: :detail
 
   def index
     @videos = Video.all
@@ -17,6 +17,14 @@ class VideosController < ApplicationController
     else
       redirect_to new_video_path, notice: "Something went wrong"
     end
+  end
+
+  def show
+    @video = Video.find(params[:id])
+  end
+
+  def detail
+    @video = Video.find(params[:id])
   end
 
   def edit

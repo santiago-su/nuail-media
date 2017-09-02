@@ -8,6 +8,11 @@
 <div class="mdl-grid">
   <div class="mdl-layout-spacer"></div>
   <div class="mdl-cell mdl-cell--4-col">
+    <%= link_to projects_path do %>
+      <button class="mdl-button mdl-js-button mdl-button--icon">
+         <i class="material-icons">arrow_back</i>
+      </button>
+    <% end %>
     <h1><%= @design.name %></h1>
   </div>
   <div class="mdl-layout-spacer"></div>

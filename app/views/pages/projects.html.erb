@@ -14,6 +14,10 @@
           <%= link_to photo_detail_path(project) do %>
             <%= cl_image_tag(project.photo_images.last.file_url) %>
           <% end %>
+        <% elsif project.class.name == "Video" %>
+          <%= link_to video_detail_path(project) do %>
+            <%= cl_image_tag(project.video_images.last.file_url) %>
+          <% end %>
         <% end %>
         <div class="project-info-container">
           <div class="project-name">
@@ -33,14 +37,14 @@
         <a href="#video-panel" class="mdl-tabs__tab">Video</a>
         <a href="#photo-panel" class="mdl-tabs__tab">Photo</a>
         <a href="#design-panel" class="mdl-tabs__tab">Design</a>
-        <a href="#editorial-panel" class="mdl-tabs__tab">Editorial</a>
+        <a href="#editorial-panel" class="mdl-tabs__tab">Nu-Bundle</a>
       </div>
 
       <div class="mdl-tabs__panel is-active" id="all-panel">
         <%= render partial: 'project-tabs/all_projects', locals: { designs: @designs, photos: @photos, editorials: @editorials } %>
       </div>
       <div class="mdl-tabs__panel" id="video-panel">
-        <%= render partial: 'project-tabs/video_projects' %>
+        <%= render partial: 'project-tabs/video_projects', locals: { videos: @videos } %>
       </div>
       <div class="mdl-tabs__panel" id="photo-panel">
         <%= render partial: 'project-tabs/photo_projects', locals: { photos: @photos } %>

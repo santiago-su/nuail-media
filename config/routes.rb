@@ -22,7 +22,11 @@ Rails.application.routes.draw do
   get 'edgar',              to: 'pages#team_second'
   get 'saletta',            to: 'pages#team_third'
 
-  resources :videos
+  resources :videos do
+    resources :video_images
+  end
+
+  get 'videos/:id/video-detail',  to: 'videos#detail', as: 'video-detail'
 
   resources :photos do
     resources :photo_images

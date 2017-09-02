@@ -1,0 +1,18 @@
+<div class="mdl-cell mdl-cell--4-col">
+  <%= form_for [video, video_image], namespace: :videos, html: { multipart: true, id: 'video_form'} do |f| %>
+
+  <div class="mdl-cell mdl-cell--12-col">
+    <%= f.label :file_url, "Fotos" %>
+    <%= f.file_field :file_url %>
+    <%= f.hidden_field :file_url_cache %>
+  </div>
+
+  <div class="mdl-cell mdl-cell--12-col">
+    <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+      Añadir más imagenes
+    </button>
+  </div>
+
+  <% end %>
+
+</div>

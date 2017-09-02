@@ -22,7 +22,7 @@ $( document ).ready(function() {
        return
      }
 
-     $('.video-cont').append('<iframe class="video-iframe" src="https://youtube.com/embed/2Z_tMfffAVE"></iframe>')
+     $('.video-service-container').append('<iframe class="video-iframe" src="https://youtube.com/embed/2Z_tMfffAVE"></iframe>')
 
   })
 
@@ -77,7 +77,6 @@ function scaleBannerVideoSize(element){
   videoWidth,
   videoHeight;
 
-  // console.log(windowHeight);
 
   $(element).each(function(){
     var videoAspectRatio = $(this).data('height')/$(this).data('width');
