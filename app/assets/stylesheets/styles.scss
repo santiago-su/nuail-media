@@ -1,8 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Francois+One');
 
+html {
+  height: 100%;
+}
+
 body {
   margin: 0;
   font-family: 'Francois One', sans-serif;
+  min-height: 100%;
 }
 
 /* Disable ugly boxes around images in IE10 */
@@ -250,7 +255,9 @@ a img{
 
 .nuail-footer {
   background-color: #15181d;
-  position: relative;
+  position: absolute;
+  width: 95%;
+  top: 100%;
 }
 
 .nuail-footer a:hover {
@@ -394,7 +401,6 @@ a img{
 
 
 .video-service-page {
-  height: 900px;
 
   p.line-item-video {
     font-size: 20px;
@@ -423,8 +429,8 @@ a img{
 }
 
 .video-cont {
-  width: 600px;
-  height: 350px;
+  width: 90%;
+  height: 55%;
   border-radius: 3px;
   position: relative;
   overflow: hidden;
@@ -591,9 +597,9 @@ a img{
 
 .division-line-video {
   left: 48%;
-  top: -80%;
+  top: -40%;
   width: 3px;
-  height: 290%;
+  height: 170%;
   margin: 0;
   position: absolute;
   overflow: hidden;
@@ -601,8 +607,8 @@ a img{
 
 .division-line-video-inner {
   position: absolute;
-  width:100%;
-  height: 50%;
+  width: 100%;
+  height: 60%;
   background: black;
   top: 30%;
 }
@@ -630,4 +636,8 @@ a img{
 
 .mdl-button--accent.mdl-button--accent.mdl-button--raised, .mdl-button--accent.mdl-button--accent.mdl-button--fab {
   background-color: #526e90;
+}
+
+.page-service-image {
+  width: 90%;
 }

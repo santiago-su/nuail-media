@@ -76,34 +76,33 @@
       <div class="nuail-content mdl-layout__content">
         <a name="top"></a>
         <%= yield %>
-
-        <footer class="nuail-footer mdl-mega-footer">
-          <div class="mdl-mega-footer--top-section">
-            <div class="mdl-mega-footer--left-section">
-              <%= image_tag 'facebook.png', width: 55, height: 55 %>
-              &nbsp;
-              <%= image_tag 'twitter.png', width: 45, height: 45 %>
-              &nbsp;
-              <%= image_tag 'instagram.png', width: 45, height: 45 %>
-            </div>
-            <div class="mdl-mega-footer--right-section">
-              <a class="mdl-typography--font-light" href="#top">
-                Regresar al principio
-                <i class="material-icons">expand_less</i>
-              </a>
-            </div>
-          </div>
-
-          <div class="mdl-mega-footer--middle-section">
-            <p class="mdl-typography--font-light">© Nuail Media 2017</p>
-            <p class="mdl-typography--font-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
-          </div>
-
-          <div class="mdl-mega-footer--bottom-section">
-            <%= link_to "Admin", user_session_path, class: 'nuail-link nuail-admin-link mdl-typography--font-light' %>
-          </div>
-        </footer>
       </div>
     </div>
+    <footer class="nuail-footer mdl-mega-footer">
+      <div class="mdl-mega-footer--top-section">
+        <div class="mdl-mega-footer--left-section">
+          <%= image_tag 'facebook.png', width: 55, height: 55 %>
+          &nbsp;
+          <%= image_tag 'twitter.png', width: 45, height: 45 %>
+          &nbsp;
+          <%= image_tag 'instagram.png', width: 45, height: 45 %>
+        </div>
+        <div class="mdl-mega-footer--right-section">
+          <a class="mdl-typography--font-light" href="#top">
+            Regresar al principio
+            <i class="material-icons">expand_less</i>
+          </a>
+        </div>
+      </div>
+
+      <div class="mdl-mega-footer--middle-section">
+        <p class="mdl-typography--font-light">© Nuail Media 2017</p>
+        <p class="mdl-typography--font-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+      </div>
+
+      <div class="mdl-mega-footer--bottom-section">
+        <%= link_to "Admin", user_session_path, class: 'nuail-link nuail-admin-link mdl-typography--font-light' %>
+      </div>
+    </footer>
   </body>
 </html>
