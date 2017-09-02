@@ -45,7 +45,7 @@
                   <%= link_to "NU-BUNDLE", editorial_service_path, class: "mdl-menu__item" %>
                 </ul>
                 <%= link_to "PROYECTOS", projects_path, class: "mdl-navigation__link mdl-typography--text-uppercase" %>
-                <%= link_to "NOSOTROS", nosotros_path, class: "mdl-navigation__link mdl-typography--text-uppercase" %>
+                <%= link_to "NOSOTROS", about_path, class: "mdl-navigation__link mdl-typography--text-uppercase" %>
                 <%= link_to "CONTACTO", new_contact_path, class: "mdl-navigation__link mdl-typography--text-uppercase" %>
               <% end %>
             </nav>
@@ -67,8 +67,8 @@
           <%= link_to "DISEÑO", design_service_path, class: "mdl-navigation__link" %>
           <%= link_to "NU-BUNDLE", editorial_service_path, class: "mdl-navigation__link" %>
           <%= link_to "PROYECTOS", projects_path, class: "mdl-navigation__link" %>
-          <a class="mdl-navigation__link" href="#">NOSOTROS</a>
-          <a class="mdl-navigation__link" href="#">CONTACTO</a>
+          <%= link_to "NOSOTROS", about_path, class: "mdl-navigation__link" %>
+          <%= link_to "CONTACTO", new_contact_path, class: "mdl-navigation__link" %>
         </nav>
       </div>
       <%= render partial: "shared/flash_messages", flash: flash %>
@@ -81,11 +81,11 @@
     <footer class="nuail-footer mdl-mega-footer">
       <div class="mdl-mega-footer--top-section">
         <div class="mdl-mega-footer--left-section">
-          <%= image_tag 'facebook.png', width: 55, height: 55 %>
+          <%= link_to image_tag('facebook.png'), "https://www.facebook.com/NUAILMEDIAMX/", class: 'footer-social-icon', target: "_blank" %>
           &nbsp;
           <%= image_tag 'twitter.png', width: 45, height: 45 %>
           &nbsp;
-          <%= image_tag 'instagram.png', width: 45, height: 45 %>
+          <%= link_to image_tag('instagram.png'), "https://www.instagram.com/nuailmedia/?hl=en", class: 'footer-social-icon', target: "_blank" %>
         </div>
         <div class="mdl-mega-footer--right-section">
           <a class="mdl-typography--font-light" href="#top">

@@ -17,7 +17,10 @@ Rails.application.routes.draw do
   get 'design-service',     to: 'pages#design'
   get 'editorial-service',  to: 'pages#editorial'
   get 'projects',           to: 'pages#projects'
-  get 'nosotros',           to: 'pages#about'
+  get 'about',              to: 'pages#about'
+  get 'eduardo',            to: 'pages#team_first'
+  get 'edgar',              to: 'pages#team_second'
+  get 'saletta',            to: 'pages#team_third'
 
   resources :videos
 

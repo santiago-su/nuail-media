@@ -18,6 +18,17 @@ class PagesController < ApplicationController
   def about
   end
 
+  # Team members
+
+  def team_first
+  end
+
+  def team_second
+  end
+
+  def team_third
+  end
+
   def projects
     @videos = Video.all
     @designs = Design.all
